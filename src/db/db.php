@@ -49,7 +49,7 @@ abstract class db
         }
     }
 
-    abstract protected function getConnection(): mixed;
+    abstract protected function connect(): mixed;
 
-    abstract protected function closeConnection(): bool;
+    abstract protected function close(): bool;
 }
