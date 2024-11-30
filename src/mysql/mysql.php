@@ -12,7 +12,7 @@ class mysql extends db
         $this->dbname = $dbname;
     }
 
-    public function getConnection(): \PDO|null
+    public function connect(): \PDO|null
     {
         try {
 
@@ -30,7 +30,7 @@ class mysql extends db
             return null;
         }
     }
-    public function closeConnection(): bool
+    public function close(): bool
     {
         try {
             if ($this->connection !== null) {
