@@ -21,7 +21,7 @@ abstract class db
             $configFile = __DIR__ . '/../../../../../conf/db.conf';
             $configPath = realpath($configFile);
             if (!file_exists($configFile)) {
-                throw new \RuntimeException("Configuration file not found: {$configFile}");
+                throw new \RuntimeException("Configuration file not found: {$configPath}");
             }
 
             $configLines = file($configFile, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
